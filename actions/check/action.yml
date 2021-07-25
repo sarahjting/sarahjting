@@ -1,0 +1,9 @@
+name: 'Check'
+description: 'Scheduled action to decay and play with pet'
+inputs:
+  token:
+    description: 'Github Personal Access Token'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

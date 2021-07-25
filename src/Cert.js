@@ -61,7 +61,7 @@ module.exports = class Cert {
         return this._buildPanel(
             'play',
             this.data.get('play') / this.data.get('play_max'),
-            this.data.get('play_log').map((log) => `[${log.created_at.substr(5, 5)}] commit on ${log.repo}`)
+            this.data.get('play_log').map((log) => `[${log.created_at.substr(5, 5)}] ${log.action} on ${log.repo}`)
         );
     }
     _buildPanel(header, barPercentage, log) {

@@ -27,8 +27,8 @@ module.exports = class Data {
     }
     pushLog(key, value) {
         this.push(key, {
-            ...value,
             created_at: new Date().toISOString(),
+            ...value,
         });
     }
     save() {
