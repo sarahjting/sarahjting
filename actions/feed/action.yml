@@ -1,0 +1,13 @@
+name: 'Feed'
+description: 'Feeds a pet'
+inputs:
+  username:
+    description: 'Github Username'
+    required: true
+  title:
+    description: 'Github Issue Title'
+    required: true
+    default: 'feed:snack'
+runs:
+  using: 'node12'
+  main: 'index.js'
