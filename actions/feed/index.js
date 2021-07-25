@@ -8,4 +8,5 @@ args = args.replace(/\W/g, '');
 if (command === 'feed' && args) {
     const pet = new Pet(new Data());
     pet.feed(core.getInput('username'), args);
+    pet.save();
 }
