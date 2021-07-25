@@ -25,7 +25,7 @@ axios.get(`https://api.github.com/users/${data.get('username')}/events`, {
         .forEach(event => {
             pet.play(
                 event.actor.login,
-                event.public || event.repo.name.substr(0, data.get('username').length + 1) === data.get('username') + '/' ? event.repo.name : '<private>',
+                event.public ? event.repo.name : `private#${event.repo.id.toString(16)}`,
                 allowedTypes[event.type],
                 new Date(event.created_at).toISOString()
             );
